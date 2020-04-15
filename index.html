@@ -127,11 +127,30 @@
 				document.getElementById('food_img').style.opacity='1';
 
 			}
+			//state
+			var state = "Texas";
+			
+			
+			//database of restraunts
+			var database = [
+			/*Here is how the database is formatted
+			["Restraunt Name","state",["menu_item","menu_item","menu_item"]]
+			*/
+			//texas
+			["Mcdonalds","texas",["fries","burger"]]
+			]
 			
 			//searching for restruants
 			function search_query(){
 				var searchElement = document.getElementById("roundsearch").value;
-				document.write("Could not find any menu items '" + searchElement + "'");
+				for(i of database){
+					for(j of i[2]){
+						if(j == searchElement)
+						{
+							document.write("yas");
+						}
+					}
+				}
 			}
 		</script>
 	</body>
