@@ -7,6 +7,30 @@
 			#logo{
 				text-align:center;
 			}
+			
+			#food_img{
+				opacity: 0;
+
+    				-webkit-transition: opacity 3s ease-in;
+    				-moz-transition: opacity 3s ease-in;
+   				-o-transition: opacity 3s ease-in;
+    				-ms-transition: opacity 3s ease-in;
+			    	transition: opacity 3s ease-in;
+		
+			}
+
+			.container {
+  				position: relative;
+  				text-align: center;
+  				color: white;
+			}
+			
+			#some_slogan {
+  				position: absolute;
+  				bottom: 100px;
+  				left: 200px;
+				width:50%;
+			}
 		</style>
 	</head>
 	<body>
@@ -27,7 +51,10 @@
 		</div>
 		
 		<script>
-		
+			function fadeInImage(){
+				document.getElementById('food_img').style.opacity='1';
+
+			}
 		</script>
 	</body>
 
