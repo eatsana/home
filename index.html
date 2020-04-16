@@ -217,7 +217,16 @@
 							else{
 								var pluralName = i[0] + "s"
 							}
-							document.write("<div style='border:solid rgb(244,245,247) 3px;border-radius:25px;width:60%;margin:auto;background-color:white'><br><h1>" + i[0] + "</h1><p>"+ i[3] +"</p><img style='width:50%' src='"+i[4]+"'><br><br><br><button style='border-radius:50px;border:none;font-size:150%;width:40%;height:15%;font-family:monospace'>Find "+pluralName+" near you</button><br><br></div><br><br>");
+							
+							//finding restruants
+							function findRestraunt(){
+								//removing spaces from restraunt name
+								var restrName = i[0].split(" ");
+								restName = restName.join("+");
+								window.open("https://www.google.com/maps/search/"+restName+"/");
+							}
+							
+							document.write("<div style='border:solid rgb(224,225,227) 3px;border-radius:25px;width:60%;margin:auto;background-color:white'><br><h1>" + i[0] + "</h1><p>"+ i[3] +"</p><img style='width:100%' src='"+i[4]+"'><br><br><br><button onclick="findRestraunt()" style='border-radius:50px;border:none;font-size:150%;width:40%;height:15%;font-family:monospace'>Find "+pluralName+" near you</button><br><br></div><br><br>");
 							
 							
 							
@@ -230,7 +239,7 @@
 				//if the item can't be found on any resturaunt in the state
 				if(item_found==false){
 					document.write("Couldn't find '"+ searchElement +"' in any resturaunt in your area");
-					window.open("https://www.google.com/maps/search/Tony's+Italian+Delicatessen/")
+		
 				}
 			}
 			
