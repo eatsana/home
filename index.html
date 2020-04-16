@@ -172,7 +172,9 @@
 				}
 				
 				//if the item can't be found on any resturaunt in the state
-				document.write("Couldn't find '"+ searchElement +"' in any resturaunt in your area");
+				if(item_found==false){
+					document.write("Couldn't find '"+ searchElement +"' in any resturaunt in your area");
+				}
 			}
 			
 		</script>
