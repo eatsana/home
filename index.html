@@ -127,9 +127,11 @@
 				document.getElementById('food_img').style.opacity='1';
 
 			}
-			//state
-			var state = "Texas";
+			//if any resturants have the item
+			var item_found = false;
 			
+			//the user's state
+			var uSstate = "Texas";
 			
 			//database of restraunts
 			var database = [
@@ -137,24 +139,43 @@
 			["Restraunt Name","state",["menu_item","menu_item","menu_item"]]
 			*/
 			//texas
-			["Mcdonalds","texas",["fries","burger"]],
-			["Wendies","texas",["fries","burger"]]
+			["Mcdonalds","texas",["fries","burger","chicken nuggets"]],
+			["Wendies","texas",["fries","burger",]]
 				
 				
-			]
+			];
 			
 			//searching for restruants
+			
 			function search_query(){
+				//gets the search bar element
 				var searchElement = document.getElementById("roundsearch").value;
 				for(i of database){
+					/*
+					i[0] is the name of the restraunt
+					example: "McDonalds"
+					
+					i[1] is the state of the restraunt
+					example: "california"
+					
+					i[2] is the menu items
+					example: ["fries","burger"]
+					*/
 					for(j of i[2]){
-						if(j == searchElement)
+						//compares search entry to menu items
+						if(j == searchElement and i[1] == uSstate)
 						{
-							document.write(i[0]);
+							//displays restraunts that have the menue item
+							document.write("<h1>" + i[0] + "</h1>");
+							item_found=true;
 						}
 					}
 				}
+				
+				//if the item can't be found on any resturaunt in the state
+				document.write("Couldn't find '"+ searchElement +"' in any resturaunt in your area");
 			}
+			
 		</script>
 	</body>
 
