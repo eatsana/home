@@ -179,8 +179,8 @@
 			cake
 
 			*/
-			["Tony's Italian Delicatessen","texas",["italian","italian food","sandwitches","sandwitch","deli","parmesan","beef melt","turkey melt","ham melt","chicken parm","chicken parmesan","meatballs","meat balls","meatball","meat ball","muffaletta","stromboli","salad","salads","antipasto salad","chicken salad","caprese salad","chef salad","limoncello","eclair","cannoli","carrot cake","tiramisu","chocolate cake","cake"],"At Tony's we take the time to prepare fresh ingredients for our customers, with a little love mixed in.<br> Come in and see why Tony's was rated #1 restaurant in the nation by customers on Yelp."],
-			["Gino’s Deli Stop N Buy","texas",["deli"],"nice place"]
+			["Tony's Italian Delicatessen","texas",["italian","italian food","sandwitches","sandwitch","deli","parmesan","beef melt","turkey melt","ham melt","chicken parm","chicken parmesan","meatballs","meat balls","meatball","meat ball","muffaletta","stromboli","salad","salads","antipasto salad","chicken salad","caprese salad","chef salad","limoncello","eclair","cannoli","carrot cake","tiramisu","chocolate cake","cake"],"At Tony's we take the time to prepare fresh ingredients for our customers, with a little love mixed in.<br> Come in and see why Tony's was rated #1 restaurant in the nation by customers on Yelp.","https://s.hdnux.com/photos/56/43/00/12202005/3/rawImage.jpg"],
+			["Gino’s Deli Stop N Buy","texas",["deli"],"nice place","https://www.google.com/maps/uv?hl=en&pb=!1s0x865c612683446f3f%3A0x39873d76b1621ebb!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMW_ioq0MhmDXtLaEuPB8MCeeaI6hBJtJddNsdV%3Dw213-h160-k-no!5sgino%E2%80%99s%20deli%20stop%20n%20buy%20-%20Google%20Search!15sCAQ&imagekey=!1e10!2sAF1QipMW_ioq0MhmDXtLaEuPB8MCeeaI6hBJtJddNsdV&sa=X&ved=2ahUKEwjHlvKz2-3oAhUK2qwKHVH7A3oQoiowCnoECBAQBg#"]
 				
 				
 			];
@@ -203,6 +203,9 @@
 					
 					i[3] is the restraunts description
 					example: this is a nice restraunt.
+					
+					i[4] is a picture
+					no example needed
 					*/
 					for(j of i[2]){
 						//compares search entry to menu items
@@ -214,7 +217,7 @@
 							else{
 								var pluralName = i[0] + "s"
 							}
-							document.write("<div style='border:solid rgb(244,245,247) 1px;border-radius:25px;width:60%;margin:auto;background-color:white'><br><h1>" + i[0] + "</h1><p>"+ i[3] +"</p><br><br><br><button style='border-radius:50px;border:none;font-size:150%;width:40%;height:15%;font-family:monospace'>Find "+pluralName+" near you</button><br><br></div><br><br>");
+							document.write("<div style='border:solid rgb(244,245,247) 3px;border-radius:25px;width:60%;margin:auto;background-color:white'><br><h1>" + i[0] + "</h1><p>"+ i[3] +"</p><img src='"+i[4]+"'><br><br><br><button style='border-radius:50px;border:none;font-size:150%;width:40%;height:15%;font-family:monospace'>Find "+pluralName+" near you</button><br><br></div><br><br>");
 							
 							
 							
