@@ -179,8 +179,8 @@
 			cake
 
 			*/
-			["Tony's Italian Delicatessen","texas",["italian","italian food","sandwitches","sandwitch","deli","parmesan","beef melt","turkey melt","ham melt","chicken parm","chicken parmesan","meatballs","meat balls","meatball","meat ball","muffaletta","stromboli","salad","salads","antipasto salad","chicken salad","caprese salad","chef salad","limoncello","eclair","cannoli","carrot cake","tiramisu","chocolate cake","cake"],"At Tony's we take the time to prepare fresh ingredients for our customers, with a little love mixed in.<br> Come in and see why Tony's was rated #1 restaurant in the nation by customers on Yelp.","https://s.hdnux.com/photos/56/43/00/12202005/3/rawImage.jpg","https://www.google.com/maps/search/Tony's+Italian+Delicatessen/"],
-			["Gino’s Deli Stop N Buy","texas",["deli"],"nice place","https://i0.wp.com/myginosdeli.com/wp-content/uploads/2017/05/20986873_1756633357967593_3068922757703008256_n.jpg?fit=640%2C640","https://www.google.com/maps/search/Gino’s+Deli+Stop+N+Buy/"]
+			["Tony's Italian Delicatessen","texas",["italian","italian food","sandwitches","sandwitch","deli","parmesan","beef melt","turkey melt","ham melt","chicken parm","chicken parmesan","meatballs","meat balls","meatball","meat ball","muffaletta","stromboli","salad","salads","antipasto salad","chicken salad","caprese salad","chef salad","limoncello","eclair","cannoli","carrot cake","tiramisu","chocolate cake","cake"],"At Tony's we take the time to prepare fresh ingredients for our customers, with a little love mixed in.<br> Come in and see why Tony's was rated #1 restaurant in the nation by customers on Yelp.","https://s.hdnux.com/photos/56/43/00/12202005/3/rawImage.jpg","https://www.google.com/maps/search/Tony's+Italian+Delicatessen/",0],
+			["Gino’s Deli Stop N Buy","texas",["deli"],"nice place","https://i0.wp.com/myginosdeli.com/wp-content/uploads/2017/05/20986873_1756633357967593_3068922757703008256_n.jpg?fit=640%2C640","https://www.google.com/maps/search/Gino’s+Deli+Stop+N+Buy/",1]
 				
 				
 			];
@@ -188,11 +188,12 @@
 			//searching for restruants
 			
 			function search_query(){
-				var numberORestraunts = 0;
+				var numberORestraunts = -1;
 				var mapUrl = [];
 				//gets the search bar element
 				var searchElement = document.getElementById("roundsearch").value;
 				for(i of database){
+					numberORestraunts+=1;
 					/*
 					i[0] is the name of the restraunt
 					example: "McDonalds"
@@ -229,11 +230,11 @@
 
 							var formattedRestrauntName = i[0].replace("'","")
 							document.write("<div style='border:solid rgb(244,245,247) 2px;border-radius:25px;width:75%;margin:auto;background-color:white'><br><h1 style='color:rgb(20,20,20)'>" + i[0] + "</h1><p style='color:rgb(150,150,150)'>"+ i[3] +"</p><img style='width:100%' src='"+i[4]+"'><br><br><br><hr><button id='btngo"+formattedRestrauntName+"' style='border-radius:50px;border:none;width:50px;font-size:150%;font-family:monospace'><img src='pointer.png'></button><br><br></div><br><br>");
-							mapUrl.append(i[5])
+							mapUrl.push(i[5])
 							document.getElementById("btngo"+formattedRestrauntName).addEventListener ("click", function(){
 								//var restrName = formattedRestrauntName.split(" ");
 								//restrName = restrName.join("+");
-								document.write(mapUrl);
+								document.write(mapUrl[i[6]]);
 							}, false);
 							document.write(i)
 							
