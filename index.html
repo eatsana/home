@@ -233,7 +233,7 @@
 							mapUrl.push(i[5])
 							
 							var lookUpBtn = document.getElementById("btngo"+formattedRestrauntName)
-							lookUpBtn.onclick(window.open(i[5]))
+							lookUpBtn.onclick = window.open(i[5])
 							
 							/*document.getElementById("btngo"+formattedRestrauntName).addEventListener ("click", function(){
 								//var restrName = formattedRestrauntName.split(" ");
