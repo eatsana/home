@@ -221,12 +221,14 @@
 							//finding restruants
 
 							//removing spaces from restraunt name
-							var restrName = i[0].split(" ");
-							restrName = restrName.join("+");
-							window.open("https://www.google.com/maps/search/"+restrName+"/");
+							function findRestraunt(){
+								var restrName = i[0].split(" ");
+								restrName = restrName.join("+");
+								window.open("https://www.google.com/maps/search/"+restrName+"/");
+							}
 
-							document.write("<div style='border:solid rgb(224,225,227) 3px;border-radius:25px;width:60%;margin:auto;background-color:white'><br><h1>" + i[0] + "</h1><p>"+ i[3] +"</p><img style='width:100%;margin:10px' src='"+i[4]+"'><br><br><br><button onclick='findRestraunt()' style='border-radius:50px;border:none;font-size:150%;width:40%;height:15%;font-family:monospace'>Find "+pluralName+" near you</button><br><br></div><br><br>");
-							
+							document.write("<div style='border:solid rgb(224,225,227) 3px;border-radius:25px;width:60%;margin:auto;background-color:white'><br><h1>" + i[0] + "</h1><p>"+ i[3] +"</p><img style='width:100%;margin:10px' src='"+i[4]+"'><br><br><br><button id='btngo' style='border-radius:50px;border:none;font-size:150%;width:40%;height:15%;font-family:monospace'>Find "+pluralName+" near you</button><br><br></div><br><br>");
+							document.getElementById("btngo").addEventListener ("click", findRestraunt, false);
 							
 							
 							//document.write("<button style='border-radius:50px;border:none;font-size:150%;width:30%;height:15%;font-family:monospace'>Find "+pluralName+" near you</button>")
