@@ -225,12 +225,20 @@
 							}
 							
 							//finding restruants
-
+							document.write(`
+<script>
+function findRestr(x){
+	if(x == 0){
+		document.write("F")
+	}
+}
+<script>`);
 							//removing spaces from restraunt name
-
+							
 							var formattedRestrauntName = i[0].replace("'","")
-							document.write("<div style='border:solid rgb(244,245,247) 2px;border-radius:25px;width:75%;margin:auto;background-color:white'><br><h1 style='color:rgb(20,20,20)'>" + i[0] + "</h1><p style='color:rgb(150,150,150)'>"+ i[3] +"</p><img style='width:100%;' src='"+i[4]+"'><br><br><br><hr><button id='btngo"+i[6]+"' style='border-radius:50px;border:none;width:120px;font-size:150%;font-family:monospace'><img src='pointer.png'></button><br><br></div><br><br>");
-							mapUrl.push(i[5])
+							document.write("<div style='border:solid rgb(244,245,247) 2px;border-radius:25px;width:75%;margin:auto;background-color:white'><br><h1 style='color:rgb(20,20,20)'>" + i[0] + "</h1><p style='color:rgb(150,150,150)'>"+ i[3] +"</p><img style='width:100%;' src='"+i[4]+"'><br><br><br><hr><button id='btngo"+i[6]+"' onclick='findRestr("+i[6]+")' style='border-radius:50px;border:none;width:120px;font-size:150%;font-family:monospace'><img src='pointer.png'></button><br><br></div><br><br>");
+							
+							/*mapUrl.push(i[5])
 							var x = i[6]
 							document.write(x)
 							document.getElementById("btngo"+i[6]).addEventListener ("click", function(){
@@ -238,7 +246,7 @@
 								//restrName = restrName.join("+");
 								document.write(mapUrl[numberORestraunts]);
 							}, false);
-							//window.open(i[5]);
+							//window.open(i[5]);*/
 							
 							
 							//document.write("<button style='border-radius:50px;border:none;font-size:150%;width:30%;height:15%;font-family:monospace'>Find "+pluralName+" near you</button>")
