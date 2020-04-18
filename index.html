@@ -229,7 +229,7 @@
 							//removing spaces from restraunt name
 							
 							var formattedRestrauntName = i[0].replace("'","")
-							document.write("<div style='border:solid rgb(244,245,247) 2px;border-radius:25px;width:75%;margin:auto;background-color:white'><br><h1 style='color:rgb(20,20,20)'>" + i[0] + "</h1><p style='color:rgb(150,150,150)'>"+ i[3] +"</p><img style='width:100%;' src='"+i[4]+"'><br><br><br><hr><button id='btngo"+i[6]+"' onclick='window.open(\""+i[5]+"\")' style='border-radius:50px;border:none;width:120px;font-size:150%;font-family:monospace'><img src='pointer.png'></button><br><br></div><br><br>");
+							document.write("<div style='border:solid rgb(244,245,247) 2px;border-radius:25px;width:75%;margin:auto;background-color:white'><br><h1 style='color:rgb(20,20,20)'>" + i[0] + "</h1><p style='color:rgb(150,150,150)'>"+ i[3] +"</p><img style='width:100%;' src='"+i[4]+"'><br><br><br><hr><button id='btngo"+i[6]+"' "+ `onclick='window.open("${i[5]}")' `+"style='border-radius:50px;border:none;width:120px;font-size:150%;font-family:monospace'><img src='pointer.png'></button><br><br></div><br><br>");
 							
 							/*mapUrl.push(i[5])
 							var x = i[6]
